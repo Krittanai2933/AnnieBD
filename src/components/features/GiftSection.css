@@ -1,0 +1,59 @@
+/* Initial state for the gift box */
+.gift-box-container {
+    position: relative;
+    overflow: hidden;
+    animation: openGiftBox 2s ease-in-out forwards; /* Adjust duration as needed */
+}
+
+/* Gift box animation */
+.gift-animation {
+    font-size: 5rem;
+    animation: bounce 1.5s infinite;
+    cursor: default;
+}
+
+/* Add the 'open' class when the gift box is fully opened */
+.gift-box-container.open {
+    animation: none;
+    cursor: default;
+}
+
+/* Animation for opening the gift box */
+@keyframes openGiftBox {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Simple bounce animation for the gift box */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Styles for the counting number */
+.count-up-box {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
